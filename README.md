@@ -43,7 +43,7 @@ Para informações de como compilar e executar os projetos, consulte um dos segu
 | ------ | ------------------------------------------------ | ----------------------------------- |
 | 1      | André                                            | André                               |
 | 2      | Cristian e Alexsander                            | Cristian e Alexsander               |
-| 3      | COVID-19                                         | Gabriel Righi                       |
+| 3      | COVID-19                                         | Gabriel Righi e Bruno Alves         |
 | 4      | Bruno                                            | Bruno Gottlieb                      |
 | 5*     | Grupo da Goleadera                               | Frederico e William                 |
 | 6      | Backteam                                         | Fernando Garcia e Felipe Mello      |
