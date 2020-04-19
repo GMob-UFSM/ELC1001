@@ -14,6 +14,8 @@
 
 ## Informações extras
 
+Você pode importar o arquivo [`gmob-moda.postman_collection.json`](gmob-moda.postman_collection.json) no POSTMAN para ter uma ideia de quais são as rotas e quais parâmetros são passados para ela.
+
 O arquivo `.env.dev` já contem um acesso de desenvolvimento a um banco de dados MongoDB hospedado no [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), que é um ambiente que disponibiliza instâncias do Mongo de forma gratuita.
 
 Você pode usar esse banco disponibilizado ou criar o seu próprio, basta modificar o arquivo `.env.dev` com o acesso ao seu banco de dados (seja ele local ou hospedado na nuvem).

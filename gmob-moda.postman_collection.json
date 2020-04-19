@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "c58fc84d-ae6e-4113-a19b-139282eaa407",
+		"name": "gmob-moda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH required",
+			"item": [
+				{
+					"name": "GET logged in user info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/api/v1/user/me",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET all garments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/api/v1/garment?skip=0&limit=20",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"garment"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET garment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/api/v1/garment/:garmentId",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"garment",
+								":garmentId"
+							],
+							"variable": [
+								{
+									"key": "garmentId",
+									"value": "5e8196c5a52751037cf6bab0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Garment (Camiseta Inter)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"body_part\": \"torso\",\r\n\t\"model\": \"Camiseta Internacional 2019/20\",\r\n\t\"manufactor\": \"Nike\",\r\n\t\"manufactor_url\": \"nike.com\",\r\n\t\"description\": \"Camiseta do Sport Club Internacional na temporada 2019/2020\",\r\n\t\"default_image\": \"https://images.lojanike.com.br/500x500/produto/180323_1750871_20191016100333.png\",\r\n\t\"variants\": [\r\n\t\t{\r\n\t\t\t\"title\": \"default\",\r\n\t\t\t\"official_url\": \"https://www.nike.com.br/Produto/Camisa-Nike-Internacional-I-201920-Torcedor-Pro-Masculina/153-189-195-19791\",\r\n\t\t\t\"image_urls\": [\"https://images.lojanike.com.br/500x500/produto/19791_674659_20190625155450.png\", \"https://images.lojanike.com.br/500x500/produto/19791_674652_20190625155449.png\"]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"title\": \"Camiseta visitante\",\r\n\t\t\t\"official_url\": \"https://www.nike.com.br/Produto/Camisa-Nike-Internacional-II-201920-Torcedor-Pro-Masculina/153-173-177-19790\",\r\n\t\t\t\"image_urls\": [\"https://images.lojanike.com.br/500x500/produto/19790_674628_20190625155447.png\", \"https://images.lojanike.com.br/500x500/produto/19790_674649_20190625155449.png\"]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"title\": \"Camiseta alternativa\",\r\n\t\t\t\"official_url\": \"https://www.nike.com.br/Produto/Camisa-Nike-Internacional-III-201920-Torcedor-Pro-Masculina/153-173-177-187683\",\r\n\t\t\t\"image_urls\": [\"https://images.lojanike.com.br/500x500/produto/180323_1750871_20191016100333.png\", \"https://images.lojanike.com.br/500x500/produto/180323_1750876_20191016100333.png\"]\t\t\r\n\t\t}\t\r\n\t],\r\n\t\"composition\": [\r\n\t\t{\r\n\t\t\t\"material\": \"polyester\",\r\n\t\t\t\"percentage\": 100\r\n\t\t}\t\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/api/v1/garment/create",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"garment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{VALID_TOKEN}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5d6f7b3a-b84f-40fc-9b7c-69fbb9cdcfec",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c558955-670b-4f88-a248-457de90af29e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"gmob\",\r\n\t\"email\": \"gmob@ufsm.br\",\r\n\t\"name\": {\r\n\t\t\"first\": \"GMob\",\r\n\t\t\"last\": \"UFSM\"\r\n\t},\r\n\t\"password\": \"teste123\"\r\n}"
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/api/v1/user/register",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"register"
+					]
+				},
+				"description": "POST request to create user"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User (email)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"gmob@ufsm.br\",\r\n\t\"password\": \"teste123\"\r\n}"
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/api/v1/user/login",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User (username)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"gmob\",\r\n\t\"password\": \"teste123\"\r\n}"
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/api/v1/user/login",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d7d34f14-3cfe-4f07-9b94-5d14297a778f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8ff9176f-ae22-4da6-b7bf-a4e16f61c26f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "32dfc658-013f-433f-bafe-2e31e516fe80",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
