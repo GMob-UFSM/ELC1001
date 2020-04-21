@@ -14,6 +14,8 @@
 
 ## Informações extras
 
+Como o login e registro não estão implementados, se você precisa construir uma rota que usa as informações da variável `req.user` (usuário que está fazendo a requisição), você pode controlar essas dados modificando o objeto criado no arquivo `auth.js` (na pasta `middleware`).
+
 Você pode importar o arquivo [`gmob-moda.postman_collection.json`](gmob-moda.postman_collection.json) no POSTMAN para ter uma ideia de quais são as rotas e quais parâmetros são passados para ela.
 
 O arquivo `.env.dev` já contem um acesso de desenvolvimento a um banco de dados MongoDB hospedado no [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), que é um ambiente que disponibiliza instâncias do Mongo de forma gratuita.
